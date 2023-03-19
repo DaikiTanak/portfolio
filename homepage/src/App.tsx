@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
+      <BrowserRouter basename='process.env.PUBLIC_URL}'>
         <Header />
         <Routes>
         <Route path={`/`} element={<Home />} />
