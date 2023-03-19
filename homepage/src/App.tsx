@@ -11,11 +11,15 @@ import Contact from './components/Contact/Contact';
 
 import theme from "./theme"
 
+// const ROUTER_BASENAME =
+//   process.env.NODE_ENV === 'development' ? '/' : '/portfolio';
+
+
 function App() {
   return (
     <div className="App">
     <ThemeProvider theme={theme}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL+"/"} >
         <Header />
         <Routes>
         <Route path={`/`} element={<Home />} />
